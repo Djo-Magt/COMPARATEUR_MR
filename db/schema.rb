@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_07_085750) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_07_100435) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -21,12 +21,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_07_085750) do
     t.string "url"
     t.integer "price"
     t.string "category"
-    t.string "equipments"
     t.integer "bed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image"
     t.jsonb "services", default: {}, null: false
+    t.string "equipments", default: [], array: true
   end
 
   create_table "users", force: :cascade do |t|

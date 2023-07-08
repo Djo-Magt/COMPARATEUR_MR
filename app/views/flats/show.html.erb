@@ -1,2 +1,33 @@
-<h1>Flats#show</h1>
-<p>Find me in app/views/flats/show.html.erb</p>
+<div>
+  <h2><%= @flat.name %></h2>
+  <p>Address: <%= @flat.adress %></p>
+  <a><%= @flat.url %></a>
+  <p>---------------</p>
+  <p><%= @flat.category %></p>
+  <p>---------------</p>
+  <p><%= @flat.description %></p>
+  <p>---------------</p>
+  <p>Prix: <%= @flat.price %></p>
+  <p>---------------</p>
+  <ul>
+    <% @flat.equipments.each do |equipment| %>
+      <li><%= equipment %></li>
+    <% end %>
+  </ul>
+  <p>---------------</p>
+  <ul>
+    <% @flat.services.each do |title, elements| %>
+      <li>
+        <strong><%= title %></strong>
+        <ul>
+          <% elements.each do |service| %>
+            <li><%= service %></li>
+          <% end %>
+        </ul>
+      </li>
+    <% end %>
+  </ul>
+  <p>---------------</p>
+  <p>Nombre de lits: <%= @flat.bed %></p>
+  <p>---------------</p>
+</div>
