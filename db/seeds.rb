@@ -10,6 +10,22 @@ p "lancement seed"
 
 Flat.destroy_all
 
+image1 = File.open(Rails.root.join('app', 'assets', 'images', '78-Versailles-Templitudes-100-facade.jpg'))
+image2 = File.open(Rails.root.join('app', 'assets', 'images', '78-Versailles-Templitudes-101-exterieur.jpg'))
+image3 = File.open(Rails.root.join('app', 'assets', 'images', '78-Versailles-Templitudes-103-exterieur.jpg'))
+image4 = File.open(Rails.root.join('app', 'assets', 'images', '78-Versailles-Templitudes-109-exterieur.jpg'))
+image5 = File.open(Rails.root.join('app', 'assets', 'images', '78-Versailles-Templitudes-110-exterieur.jpg'))
+image6 = File.open(Rails.root.join('app', 'assets', 'images', '92-Garches-Templitudes-100-facade.jpg'))
+image7 = File.open(Rails.root.join('app', 'assets', 'images', '92-Garches-Templitudes-101-exterieur.jpg'))
+image8 = File.open(Rails.root.join('app', 'assets', 'images', '92-Garches-Templitudes-102-exterieur.jpg'))
+image9 = File.open(Rails.root.join('app', 'assets', 'images', '92-Garches-Templitudes-103-exterieur.jpg'))
+image10 = File.open(Rails.root.join('app', 'assets', 'images', '92-Garches-Templitudes-107-exterieur.jpg'))
+image11 = File.open(Rails.root.join('app', 'assets', 'images', '92-Garches-Templitudes-119-exterieur.jpg'))
+image12 = File.open(Rails.root.join('app', 'assets', 'images', '94-Vincennes-Templitudes-100-facade.jpg'))
+image13 = File.open(Rails.root.join('app', 'assets', 'images', '94-Vincennes-Templitudes-101-exterieur.jpg'))
+image14 = File.open(Rails.root.join('app', 'assets', 'images', '94-Vincennes-Templitudes-104-exterieur.jpg'))
+image15 = File.open(Rails.root.join('app', 'assets', 'images', '94-Vincennes-Templitudes-110-exterieur.jpg'))
+
 
 flat1 = Flat.new({
   name: 'Les Templitudes - Garches',
@@ -26,7 +42,7 @@ flat1 = Flat.new({
     "Conciergerie",
     "Homme d’entretien pour réparations courantes"
   ],
-  "Restauration" => [
+              "Restauration" => [
     "Restaurant ouvert 7j/7",
     "Salle à manger invités",
     "Menu au choix et carte raffinés (non-inclus)",
@@ -34,61 +50,78 @@ flat1 = Flat.new({
   ]},
   equipments: ["Cuisine équipée", "Parking gratuit", "Climatisation", "Jacuzzi"],
   bed: 300,
-})
-flat1.save!
+  images: [image6, image7, image8, image9, image10, image11]
+  })
+  flat1.save!
 
 
-flat2 = Flat.new({
-  name: 'Les Templitudes - Versailles',
-  adress: '18 rue du Refuge
-  78000 Versailles',
-  description: "A 20 km de Paris, au cœur d’un patrimoine architectural historique et culturel prestigieux, la résidence services seniors 'Les Templitudes' est à proximité du centre-ville de Versailles et de l’entrée du parc du Château. À deux minutes de la rue de Montreuil et de l’église Saint-Symphorien, la résidence, à l’architecture moderne et de grand standing, est située au milieu d’un grand parc aménagé. La résidence seniors les Templitudes de Versailles dispose d'appartements (location nue) allant du studio au 3 pièces. Son restaurant propose des menus variés réalisés sur place par le chef cuisinier. Les locataires peuvent profiter à tout moment des espaces Club de la résidence : salle de bridge, salon, salle de gymnastique, salle de projection, terrasse aménagée, jardin... Elle offre à ses locataires le charme et le confort d'une belle demeure, à proximité de toutes les commodités : transports, commerces, administrations...",
-  url: "https://www.lestemplitudesversailles.com/",
-  price: 200,
-  category: "Résidence seniors",
-  services: { "Reception" => [
-    "Surveillance 24/24h",
-    "Réception et accueil personnalisé de 8h à 20h",
-    "Conciergerie",
-    "Homme d’entretien pour réparations courantes"
-  ],
-  "Restauration" => [
-    "Restaurant ouvert 7j/7",
-    "Salle à manger invités",
-    "Menu au choix et carte raffinés (non-inclus)",
-    "Service de repas à domicile"
-  ]},
-  equipments: ["Sèche-linge","Parking gratuit","Climatisation","Espace de travail"],
-  bed: 210,
-})
-flat2.save!
+  flat2 = Flat.new({
+    name: 'Les Templitudes - Versailles',
+    adress: '18 rue du Refuge
+    78000 Versailles',
+    description: "A 20 km de Paris, au cœur d’un patrimoine architectural historique et culturel prestigieux, la résidence services seniors 'Les Templitudes' est à proximité du centre-ville de Versailles et de l’entrée du parc du Château. À deux minutes de la rue de Montreuil et de l’église Saint-Symphorien, la résidence, à l’architecture moderne et de grand standing, est située au milieu d’un grand parc aménagé. La résidence seniors les Templitudes de Versailles dispose d'appartements (location nue) allant du studio au 3 pièces. Son restaurant propose des menus variés réalisés sur place par le chef cuisinier. Les locataires peuvent profiter à tout moment des espaces Club de la résidence : salle de bridge, salon, salle de gymnastique, salle de projection, terrasse aménagée, jardin... Elle offre à ses locataires le charme et le confort d'une belle demeure, à proximité de toutes les commodités : transports, commerces, administrations...",
+    url: "https://www.lestemplitudesversailles.com/",
+    price: 200,
+    category: "Résidence seniors",
+    services: { "Reception" => [
+      "Surveillance 24/24h",
+      "Réception et accueil personnalisé de 8h à 20h",
+      "Conciergerie",
+      "Homme d’entretien pour réparations courantes"
+    ],
+    "Restauration" => [
+      "Restaurant ouvert 7j/7",
+      "Salle à manger invités",
+      "Menu au choix et carte raffinés (non-inclus)",
+      "Service de repas à domicile"
+      ]},
+      equipments: ["Sèche-linge","Parking gratuit","Climatisation","Espace de travail"],
+      bed: 210,
+      images: [image1, image2, image3, image4, image5]
+      })
+      flat2.save!
 
 
-flat3 = Flat.new({
-  name: 'Les Templitudes - Vincennes',
-  adress: '10 Bis Avenue du Général de Gaulle
-  94300 Vincennes',
-  description: "Aux portes de Paris et au cœur de Vincennes, face au château et à proximité du bois de Vincennes, la Résidence services seniors 'Les Templitudes' est située dans un écrin de verdure.Ses deux bâtiments de 5 et 6 étages sont exposés plein Sud et sont à proximité de toutes commodités : commerces, taxis, bus, métro, RER A...",
-  url: "https://www.lestemplitudesvincennes.com/",
-  price: 250,
-  category: "EHPAD",
-  services: { "Reception" => [
-    "Surveillance 24/24h",
-    "Réception et accueil personnalisé de 8h à 20h",
-    "Conciergerie",
-    "Homme d’entretien pour réparations courantes"
-  ],
-  "Restauration" => [
-    "Restaurant ouvert 7j/7",
-    "Salle à manger invités",
-    "Menu au choix et carte raffinés (non-inclus)",
-    "Service de repas à domicile"
-  ]},
-  equipments: ["Sèche-linge","Parking gratuit","Climatisation","Espace de travail"],
-  bed: 400,
-})
-flat3.save!
+      flat3 = Flat.new({
+        name: 'Les Templitudes - Vincennes',
+        adress: '10 Bis Avenue du Général de Gaulle
+        94300 Vincennes',
+        description: "Aux portes de Paris et au cœur de Vincennes, face au château et à proximité du bois de Vincennes, la Résidence services seniors 'Les Templitudes' est située dans un écrin de verdure.Ses deux bâtiments de 5 et 6 étages sont exposés plein Sud et sont à proximité de toutes commodités : commerces, taxis, bus, métro, RER A...",
+        url: "https://www.lestemplitudesvincennes.com/",
+        price: 250,
+        category: "EHPAD",
+        services: { "Reception" => [
+          "Surveillance 24/24h",
+          "Réception et accueil personnalisé de 8h à 20h",
+          "Conciergerie",
+          "Homme d’entretien pour réparations courantes"
+        ],
+        "Restauration" => [
+          "Restaurant ouvert 7j/7",
+          "Salle à manger invités",
+          "Menu au choix et carte raffinés (non-inclus)",
+          "Service de repas à domicile"
+          ]},
+          equipments: ["Sèche-linge","Parking gratuit","Climatisation","Espace de travail"],
+          bed: 400,
+          images: [image12, image13, image14, image15]
+          })
+          flat3.save!
 
 
-
+image1.close
+image2.close
+image3.close
+image4.close
+image5.close
+image6.close
+image7.close
+image8.close
+image9.close
+image10.close
+image11.close
+image12.close
+image13.close
+image14.close
+image15.close
 p "seed ok"
