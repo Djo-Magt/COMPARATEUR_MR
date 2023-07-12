@@ -1,8 +1,10 @@
 
 
-<div class="banner" style="background-image: url('<%= image_path "background_accueil.jpg" %>');">
+<div class="banner" style="background-image: url('<%= image_path "background.jpg" %>');">
   <div class="container">
     <h1>Trouvez la résidence et les services qui vous conviennent en fonction de <strong>VOS CRITERES !</strong></h1>
-    <a class="btn btn-flat" href="#">Apply now</a>
+    <%= link_to flats_path do %>
+    <button class="btn btn-flat">Laissez-vous guider</button>
+    <% end %>
   </div>
 </div>
