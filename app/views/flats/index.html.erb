@@ -1,12 +1,16 @@
-<h1>hello</h1>
-  <div class="row">
-    <% @flats.each do |flat| %>
-      <%= link_to flat_path(flat) do %>
-        <div class="co-12 col-sm-6 col-md-4 mb-3">
-          <div class="card-category yo" data-aos="zoom-in">
-            <%= flat.name %>
-          </div>
+
+<div class="row" data-controller="controller-test">
+  <% @flats.each do |flat| %>
+    <%= link_to flat_path(flat) do %>
+      <div class="co-12 col-sm-6 col-md-4 mb-3">
+        <div class="card-category" data-aos="zoom-in">
+          <% flat.images.each do |image| %>
+            <%= image %>
+          <% end %>
+
         </div>
-      <% end %>
+        <%= flat.name %>
+      </div>
     <% end %>
-  </div>
+  <% end %>
+</div>
